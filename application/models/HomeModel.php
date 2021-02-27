@@ -47,7 +47,7 @@
             return $this->db->update($table_name);
         }
         
-        public function quetions()
+        public function quetions() 
         {
             $query = $this->db->select('q.id, q.title, q.user_id, q.video, q.description, q.vote, q.view, q.answer, q.created_at, q.updated_at, s.name')
             ->from('quetions as q')
