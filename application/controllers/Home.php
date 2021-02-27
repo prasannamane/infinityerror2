@@ -418,6 +418,7 @@
             $this->load->view('my/template/foot');
       	}
       	
+        //update
       	public function index()
       	{
       	    $tbl = "quetions";
