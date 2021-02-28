@@ -26,16 +26,16 @@
 		            <div class="borderbottom">
                     	<ul class="tabs">
                     		<li class="tab">
-                    			<a href="https://fluentthemes.com/wp/knowledge/#" data-js="recent_questions" class="current"> <i class="icofont icon-ribbon" aria-hidden="true"></i> <span>Recent Questions</span></a>
+                    			<a href="<?=base_url('#')?>" data-js="recent_questions" class="current"> <i class="icofont icon-ribbon" aria-hidden="true"></i> <span>Recent Questions</span></a>
                     		</li>
                     		<li class="tab">
-                    			<a href="https://fluentthemes.com/wp/knowledge/#" data-js="most_responses"> <i class="icofont icon-layers" aria-hidden="true"></i> <span>Popular Questions</span></a>
+                    			<a href="<?=base_url('#')?>" data-js="most_responses"> <i class="icofont icon-layers" aria-hidden="true"></i> <span>Popular Questions</span></a>
                     		</li>
                     		<li class="tab">
-                    			<a href="https://fluentthemes.com/wp/knowledge/#" data-js="recently_answered"> <i class="icofont icon-global" aria-hidden="true"></i> <span>Recent Responses</span></a>
+                    			<a href="<?=base_url('#')?>" data-js="recently_answered"> <i class="icofont icon-global" aria-hidden="true"></i> <span>Recent Responses</span></a>
                     		</li>
                     		<li class="tab">
-                    			<a href="https://fluentthemes.com/wp/knowledge/#" data-js="no_answers"> <i class="icofont icon-linegraph" aria-hidden="true"></i> <span>Not Answered</span></a>
+                    			<a href="<?=base_url('#')?>" data-js="no_answers"> <i class="icofont icon-linegraph" aria-hidden="true"></i> <span>Not Answered</span></a>
                     		</li>
                     	</ul>
                     </div>
