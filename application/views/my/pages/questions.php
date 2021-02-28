@@ -154,7 +154,9 @@
 										</div>
 										<div class="timeline-content">
 											<p>
+											<?php if($row['video'] != ""){ ?>
 											<video  controls><source src="<?=base_url()?>/<?=$row['video']?>" type="video/mp4"></video>
+											<?php } ?> 
 											<!--<a title="" href="#" rel="nofollow">John Doe</a> 
 											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. 
 											Donec non est at libero vulputate rutrum.--></p>
@@ -288,7 +290,7 @@ class EventServiceProvider extends ServiceProvider
 							<p>
 								<label class="required" for="comment">Comment<span>*</span>
 								</label>
-								<textarea id="comment" name="description" aria-required="true" cols="58" rows="10"></textarea>
+								<textarea required id="comment" name="description" aria-required="true" cols="58" rows="10"></textarea>
 							</p>
 							<p class="form-allowed-tags">You may use these &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; tags and attributes: <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt; </code>
 							</p>

@@ -7,11 +7,11 @@
                     
                 </div>
                 <div class="crumbs">
-        <a href="https://bedkihal.com/projects.com/infinityerror4">Home</a>
-        <span class="crumbs-span">/</span> 
-        <span class="current"><?=$page_name?></span>
+                    <a href="<?=base_url()?>">Home</a>
+                    <span class="crumbs-span">/</span> 
+                    <span class="current"><?=$page_name?></span>
+                </div>
+            </div>
         </div>
-        </div>
-        </div>
-        </section>
-        </div>
+    </section>
+</div>

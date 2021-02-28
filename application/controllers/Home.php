@@ -16,6 +16,45 @@
             $this->load->model('HomeModel');          
             //$this->session->set_userdata('last_page', current_url());
       	}
+
+          //Created Feb 28, 2021
+        public function contact() {
+
+            $data['msg'] = "";
+            $data['page_name'] = "Contact";
+
+            $table_name = "contact";
+            if($this->input->post('name') != "")
+            {
+                $array_data = array(
+                    'name' => $this->input->post('name'),
+                    'email' => $this->input->post('email'),
+                    'subject' => $this->input->post('subject'),
+                    'message' => $this->input->post('message')
+                );
+
+                $result = $this->HomeModel->insert_data($table_name, $array_data);
+
+                if($result) 
+                {
+                $this->session->set_flashdata('success','You have successfully sent message '); 
+                }
+                else
+                {
+                    $this->session->set_flashdata('danger','Something went wrong');
+                }
+            }
+
+            $this->load->view('my/template/head', $data);
+            $this->load->view('my/template/startbody');
+            $this->load->view('my/template/top');
+            $this->load->view('my/template/header');
+            $this->load->view('my/template/bread');
+            $this->load->view('my/pages/contact');
+            $this->load->view('my/template/footer');
+            $this->load->view('my/template/foot');
+
+        }
       	
         public function dislike()
       	{
@@ -209,17 +248,12 @@
       	
       	public function questions($id = 0)
       	{
-      	    
-      	     
-      	    $cond = array(
-      	        'id' => $id
-            );
-      	    $tbl = "quetions";      
-      	    //$array_data = array('view' => view+1 );
+            $img_path   = "";      	     
+      	    $cond       = array(
+      	                    'id' => $id
+                            );
+      	    $tbl        = "quetions";      
       	    $res = $this->HomeModel->view_($tbl, $cond);
-      	    
-      	    //print_r($this->db->last_query());
-      	    
       	    if($this->input->post('reply'))
       	    {
       	        $config=[
@@ -234,14 +268,11 @@
                 }
                 
                 $userdata = $this->session->userdata('userdata')[0];
-                //print_r($userdata);
                 $askquestion = array(
-                    //'title' => $this->input->post('title'),
                     'user_id' =>  $userdata['id'],
                     'video' => $img_path,
                     'description' => $this->input->post('description'),
                     'quetions_id' => $id 
-                    
                     );
                 
                 $tbl = "reply";      
@@ -255,7 +286,6 @@
 	            {
 	                $this->session->set_flashdata('danger','Something went wrong');
 	            }
-      	        
       	    }
       	    
       	    $data['page_name'] = 'Questions';
@@ -418,7 +448,7 @@
             $this->load->view('my/template/foot');
       	}
       	
-        //update
+        //update Feb 28, 2021
       	public function index()
       	{
       	    $tbl = "quetions";
@@ -499,13 +529,8 @@
         }
       	
       	public function questions1()
-      	{
-      	    
-      	    
-      	   
-
+      	{   
             $data['page_name'] = 'Questions';
-            
             
       	    $this->load->view('template/head', $data);
       	    $this->load->view('template/header');
@@ -865,14 +890,7 @@
 
         }
 
-        public function contact() {
 
-           // $this->load->view('my/header', $data);
-           $this->load->view('template/header', $data);
-            $this->load->view('my/contact', $data);
-            //$this->load->view('my/footer');
-
-        }
 
         public function register_new() {
 
