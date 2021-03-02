@@ -38,7 +38,9 @@
 							</p>
 							<div>
 								<div id="highlighter_95752" class="syntaxhighlighter php">
+								<?php if($row['video'] != "") { ?>
 								    <video  controls><source src="<?=base_url()?>/<?=$row['video']?>" type="video/mp4"></video>
+								<?php } ?>
 
 
 								    
@@ -135,7 +137,18 @@
 								<div class="comment-text">
 									<div class="author clearfix">
 										<div class="comment-author">
-											<div class="fnone"> <a href="https://fluentthemes.com/wp/knowledge/author/umar/"> Umar Amin </a>
+											<?php 
+											
+
+											$cond = array(
+												'id' => $row['user_id']
+											  );
+												
+											$tbl = "signup";      
+											$user_details = $this->HomeModel->select_cond_data($tbl, $cond);
+											?>
+
+											<div class="fnone"> <a href=""> <?=$user_details[0]['name']?> </a>
 											</div>
 											<div class="date fnone">Got <span class="fnone question-vote-result question_vote_result "><?=$row['vote']?></span> Votes</div>
 										</div>

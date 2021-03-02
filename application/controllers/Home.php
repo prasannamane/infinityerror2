@@ -320,6 +320,7 @@
       	    //Array ( [title] => [category] => -1 [description] => [form_type] => add_question [post_type] => add_question [askquestion] => Publish Your Question )
       	    if($this->input->post('askquestion'))
       	    {
+                $img_path = "";
       	        $config=[
                     'upload_path'=>"myassets/video/",
                     'allowed_types'=>'*'

@@ -43,7 +43,7 @@
 							            <div class="form-inputs clearfix">
 							                <p>
 									        <label for="question-title-191" class="required">Question Title<span>*</span></label>
-									        <input name="title" id="question-title-191" class="the-title" type="text" value="">
+									        <input required name="title" id="question-title-191" class="the-title" type="text" value="">
 									        <span class="infocenter-qform-desc">Please type your question title here.</span>
 								            </p>
 								            

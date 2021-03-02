@@ -65,10 +65,10 @@
 					            </span>
 					           
 					            <div class="question-author"> 
-					                <a href="https://fluentthemes.com/wp/knowledge/author/emily/" data-original-title="Emily Cooper" class="question-author-img tooltip-n"> 
+					                <a href="https://fluentthemes.com/wp/knowledge/author/emily/" data-original-title="<?=$raw['name']?>" class="question-author-img tooltip-n"> 
 					                
-					                <img alt="Emily Cooper" src="<?=base_url('myassets/image/emily-image-2-83x83.jpg')?>" data-lazy-src="<?=base_url('myassets/image/emily-image-2-83x83.jpg')?>" class="lazyloaded" data-was-processed="true"><noscript>
-					                <img alt='Emily Cooper' src='<?=base_url('myassets/image/emily-image-2-83x83.jpg')?>'></noscript> 
+					                <img alt="<?=$raw['name']?>" src="<?=base_url('myassets/image/emily-image-2-83x83.jpg')?>" data-lazy-src="<?=base_url('myassets/image/emily-image-2-83x83.jpg')?>" class="lazyloaded" data-was-processed="true"><noscript>
+					                <img alt='<?=$raw['name']?>' src='<?=base_url('myassets/image/emily-image-2-83x83.jpg')?>'></noscript> 
 					                </a>
 					                <span class="tick2"> <i class="fa fa-check" aria-hidden="true"></i> </span>
 					                
