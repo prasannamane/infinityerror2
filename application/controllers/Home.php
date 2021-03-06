@@ -13,7 +13,9 @@
             parent::__construct();
       		$this->load->helper('url');
           	$this->load->library('session');
-            $this->load->model('HomeModel');          
+            $this->load->model('HomeModel'); 
+            $this->load->library("pagination");
+         
             //$this->session->set_userdata('last_page', current_url());
       	}
 
@@ -452,16 +454,34 @@
         //update Feb 28, 2021
       	public function index()
       	{
-      	    $tbl = "quetions";
-
+            $tbl = "quetions";
             $search = $this->input->post('s');
-            
+
             if($search){
-                $quetions = $this->HomeModel->quetions_search($tbl, $search);
+                $get_count = $this->HomeModel->get_count_search($tbl, $search); //$this->HomeModel->quetions_search($tbl, $search, $config["per_page"], $page);
             }
             else
             {
-                $quetions = $this->HomeModel->quetions($tbl);
+                $get_count = $this->HomeModel->get_count($tbl);
+            }        
+
+            $config = array();
+            $config["base_url"] = base_url() . "home/index";
+            $config["total_rows"] = $get_count;
+            $config["per_page"] = 10;
+            $config["uri_segment"] = 3;
+            $this->pagination->initialize($config);
+    
+            $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+    
+            $data["links"] = $this->pagination->create_links();
+                       
+            if($search){
+                $quetions = $this->HomeModel->quetions_search($tbl, $search, $config["per_page"], $page);
+            }
+            else
+            {
+                $quetions = $this->HomeModel->quetions($tbl, $config["per_page"], $page);
             }        
       	    
             $data['page_name'] = 'Home';

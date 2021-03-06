@@ -46,22 +46,50 @@
             $this->db->where($array_data);
             return $this->db->update($table_name);
         }
-        
-        public function quetions() 
+
+        public function get_count($tbl)
         {
+
             $query = $this->db->select('q.id, q.title, q.user_id, q.video, q.description, q.vote, q.view, q.answer, q.created_at, q.updated_at, s.name')
             ->from('quetions as q')
             ->join('signup as s', 'q.user_id = s.id', 'LEFT')
             ->get();
-            return $query->result_array();
+            //->count_all();
+            //$this->db->get();
+            return $query->num_rows();
+
         }
 
-        public function quetions_search($tbl, $search)
+        public function get_count_search($tbl, $search)
         {
+
             $query = $this->db->select('q.id, q.title, q.user_id, q.video, q.description, q.vote, q.view, q.answer, q.created_at, q.updated_at, s.name')
             ->from('quetions as q')
             ->join('signup as s', 'q.user_id = s.id', 'LEFT')
             ->like('q.title', $search)
+            //$this->db->get();
+            ->get();
+            return $query->num_rows();
+        }
+        
+        public function quetions($tbl, $limit, $start) 
+        {
+            $query = $this->db->select('q.id, q.title, q.user_id, q.video, q.description, q.vote, q.view, q.answer, q.created_at, q.updated_at, s.name')
+            ->from('quetions as q')
+            ->join('signup as s', 'q.user_id = s.id', 'LEFT')
+            ->limit($limit, $start)
+            ->get();
+            return $query->result_array();
+        }
+
+        public function quetions_search($tbl, $search, $limit, $start)
+        {
+            
+            $query = $this->db->select('q.id, q.title, q.user_id, q.video, q.description, q.vote, q.view, q.answer, q.created_at, q.updated_at, s.name')
+            ->from('quetions as q')
+            ->join('signup as s', 'q.user_id = s.id', 'LEFT')
+            ->like('q.title', $search)
+            ->limit($limit, $start)
             ->get();
             return $query->result_array();
         }
