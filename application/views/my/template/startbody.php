@@ -52,7 +52,7 @@
 	</div> 
 	<p></p>  
 	<p class="form-submit">  
-	<input type="hidden" name="redirect_to" value="https://fluentthemes.com/wp/knowledge/">  
+	<input type="hidden" name="redirect_to" value="<?=base_url()?>/wp/knowledge/">  
 	<input type="submit" name="register" value="Signup" class="button color small submit">  
 	<input type="hidden" name="form_type" value="ask-signup"></p> 
 	</form>  
@@ -77,7 +77,7 @@
 	                    onfocus="if (this.value == &#39;Password&#39;) {this.value = &#39;&#39;;}" 
 	                    onblur="if (this.value == &#39;&#39;) {this.value = &#39;Password&#39;;}" name="pwd"> 
 	                    <i class="icon-lock"></i> 
-	                    <a href="https://fluentthemes.com/wp/knowledge/#">Forgot ?</a>
+	                    <a href="<?=base_url()?>/wp/knowledge/#">Forgot ?</a>
 	                    </p>
 	                    </div>
 	                    
@@ -85,10 +85,10 @@
 	                    <span class="loader_2"></span> 
 	                    <input type="submit" value="Log in" name="login" class="button color small login-submit submit sidebar_submit">
 	                    </p>
-	                    <div class="rememberme"> <label><input type="checkbox" name="rememberme" checked="checked"> Remember Me</label></div> <input type="hidden" name="redirect_to" value="https://fluentthemes.com/wp/knowledge/"> <input type="hidden" name="login_nonce" value="e824f0b952"> <input type="hidden" name="ajax_url" value="https://fluentthemes.com/wp/knowledge/wp-admin/admin-ajax.php"> <input type="hidden" name="form_type" value="ask-login"><div class="errorlogin"></div></form></div></div></div> 
+	                    <div class="rememberme"> <label><input type="checkbox" name="rememberme" checked="checked"> Remember Me</label></div> <input type="hidden" name="redirect_to" value="<?=base_url()?>/wp/knowledge/"> <input type="hidden" name="login_nonce" value="e824f0b952"> <input type="hidden" name="ajax_url" value="<?=base_url()?>/wp/knowledge/wp-admin/admin-ajax.php"> <input type="hidden" name="form_type" value="ask-login"><div class="errorlogin"></div></form></div></div></div> 
 	
 	<div class="infocenter-panel-pop" id="lost-password">
 	    <h2>Lost Password<i class="icon-remove"></i></h2>
 	    <div class="form-style form-style-3">
-	        <p>Enter your email to reset your password.</p><form method="post" class="ask-lost-password ask_form" action="https://fluentthemes.com/wp/knowledge/"><div class="ask_error"></div><div class="form-inputs clearfix"><p> <label for="user_mail_59" class="required">E-Mail<span>*</span></label> <input type="email" class="required-item" name="user_mail" id="user_mail_59"></p></div><p class="form-submit"> <input type="submit" value="Reset" class="button color small submit"> <input type="hidden" name="form_type" value="ask-forget"></p></form><div class="clearfix"></div></div></div><div id="wrap" class=" wrap-nicescroll">
+	        <p>Enter your email to reset your password.</p><form method="post" class="ask-lost-password ask_form" action="<?=base_url()?>/wp/knowledge/"><div class="ask_error"></div><div class="form-inputs clearfix"><p> <label for="user_mail_59" class="required">E-Mail<span>*</span></label> <input type="email" class="required-item" name="user_mail" id="user_mail_59"></p></div><p class="form-submit"> <input type="submit" value="Reset" class="button color small submit"> <input type="hidden" name="form_type" value="ask-forget"></p></form><div class="clearfix"></div></div></div><div id="wrap" class=" wrap-nicescroll">
 	    

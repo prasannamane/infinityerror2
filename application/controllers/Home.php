@@ -15,6 +15,8 @@
           	$this->load->library('session');
             $this->load->model('HomeModel'); 
             $this->load->library("pagination");
+
+            //https://fluentthemes.com
          
             //$this->session->set_userdata('last_page', current_url());
       	}
@@ -274,6 +276,7 @@
                     'user_id' =>  $userdata['id'],
                     'video' => $img_path,
                     'description' => $this->input->post('description'),
+                    'youtube' => $this->input->post('youtube'),
                     'quetions_id' => $id 
                     );
                 
@@ -341,7 +344,8 @@
                     'title' => $this->input->post('title'),
                     'user_id' =>  $userdata['id'],
                     'video' => $img_path,
-                    'description' => $this->input->post('description')
+                    'description' => $this->input->post('description'),
+                    'youtube' => $this->input->post('youtube')
                     
                     );
                 

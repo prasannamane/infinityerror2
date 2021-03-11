@@ -67,17 +67,18 @@
             ->from('quetions as q')
             ->join('signup as s', 'q.user_id = s.id', 'LEFT')
             ->like('q.title', $search)
-            //$this->db->get();
+            
             ->get();
             return $query->num_rows();
         }
         
         public function quetions($tbl, $limit, $start) 
         {
-            $query = $this->db->select('q.id, q.title, q.user_id, q.video, q.description, q.vote, q.view, q.answer, q.created_at, q.updated_at, s.name')
+            $query = $this->db->select('q.youtube, q.id, q.title, q.user_id, q.video, q.description, q.vote, q.view, q.answer, q.created_at, q.updated_at, s.name')
             ->from('quetions as q')
             ->join('signup as s', 'q.user_id = s.id', 'LEFT')
             ->limit($limit, $start)
+            ->order_by('q.id', 'desc')
             ->get();
             return $query->result_array();
         }
@@ -85,11 +86,12 @@
         public function quetions_search($tbl, $search, $limit, $start)
         {
             
-            $query = $this->db->select('q.id, q.title, q.user_id, q.video, q.description, q.vote, q.view, q.answer, q.created_at, q.updated_at, s.name')
+            $query = $this->db->select('q.youtube, q.id, q.title, q.user_id, q.video, q.description, q.vote, q.view, q.answer, q.created_at, q.updated_at, s.name')
             ->from('quetions as q')
             ->join('signup as s', 'q.user_id = s.id', 'LEFT')
             ->like('q.title', $search)
             ->limit($limit, $start)
+            ->order_by('q.id', 'desc')
             ->get();
             return $query->result_array();
         }

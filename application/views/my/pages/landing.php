@@ -12,7 +12,7 @@
     }
 }
 </style>
-	<div data-bg="url(https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/01/slider3.jpg)" class="section-warp infocenter-infotex rocket-lazyload" style="background-repeat: repeat; background-attachment: fixed; background-position: 0% 0%; background-image: url(&quot;https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/01/slider3.jpg&quot;);" data-was-processed="true">
+	<div data-bg="url(<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/01/slider3.jpg)" class="section-warp infocenter-infotex rocket-lazyload" style="background-repeat: repeat; background-attachment: fixed; background-position: 0% 0%; background-image: url(&quot;<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/01/slider3.jpg&quot;);" data-was-processed="true">
 	    <div class="container clearfix">
 		<div class="box_icon box_warp box_no_border box_no_background">
 			<div class="row">

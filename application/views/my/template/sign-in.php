@@ -9,7 +9,7 @@
 							<h2>Login</h2>
 							<div class="form-style form-style-3">
 								<div class="ask_form inputs">
-			<form class="login-form ask_login" action="https://fluentthemes.com/wp/knowledge/" method="post">
+			<form class="login-form ask_login" action="<?=base_url()?>/wp/knowledge/" method="post">
 				<div class="ask_error"></div>
 				
 				<div class="form-inputs clearfix">
@@ -32,9 +32,9 @@
 					<label><input type="checkbox" name="rememberme" checked="checked"> Remember Me</label>
 				</div>
 				
-				<input type="hidden" name="redirect_to" value="https://fluentthemes.com/wp/knowledge/sign-in-to-your-account/">
+				<input type="hidden" name="redirect_to" value="<?=base_url()?>/wp/knowledge/sign-in-to-your-account/">
 				<input type="hidden" name="login_nonce" value="be8f0d127a">
-				<input type="hidden" name="ajax_url" value="https://fluentthemes.com/wp/knowledge/wp-admin/admin-ajax.php">
+				<input type="hidden" name="ajax_url" value="<?=base_url()?>/wp/knowledge/wp-admin/admin-ajax.php">
 				<input type="hidden" name="form_type" value="ask-login">
 				<div class="errorlogin"></div>
 			</form>

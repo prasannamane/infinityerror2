@@ -46,14 +46,21 @@
 									        <input required name="title" id="question-title-191" class="the-title" type="text" value="">
 									        <span class="infocenter-qform-desc">Please type your question title here.</span>
 								            </p>
-								            
+
+											<p>
+									        <label for="" class="required">Youtube Link</label>
+									        <input required name="youtube" id="" class="the-title" type="text" value="" placeholder="https://www.youtube.com/">
+									        
+								            </p>
+								           <!-- 
 								            <p>
 										    <label for="question_tags-191">Tags</label>
 										    <input type="checkbox" id="" class="" name="tag[]" value="1">PHP
 
-<!--										    <input type="text" class="input question_tags" name="question_tags" id="question_tags-191" value="" data-seperator="," style="display: none;"><ul class="taglist"><li class="input"><input type="text"><span style="display: none;"></span></li></ul>-->
+
 										    <span class="infocenter-qform-desc">Please input your Keywords here. Example : <span class="color">html , php</span> .</span>
-									        </p>
+									        </p>-->
+											<!--										    <input type="text" class="input question_tags" name="question_tags" id="question_tags-191" value="" data-seperator="," style="display: none;"><ul class="taglist"><li class="input"><input type="text"><span style="display: none;"></span></li></ul>-->
 									        
 									       <!-- <p>
 									            <label for="question-category-191" class="required">Category<span>*</span></label>
@@ -115,7 +122,7 @@
 										<div class="clearfix"></div>
 									</div>-->
 									
-									<label>Attachment</label>
+									<!--<label>Attachment</label> -->
 									<!--<div class="question-multiple-upload">
 										<div class="clearfix"></div>
 										<p class="form-submit add_poll">
@@ -141,14 +148,16 @@
 							    <li id="poll_li_1">
 							        <div class="poll-li">
 							            <div class="fileinputs" style="width: 100% !important;">
-							                <input type="file" class="file" name="attachment" >
+							                <!--
+											<input type="file" class="file" name="attachment" >
 							                <div class="fakefile" >
 							                    <button type="button" class="button small margin_0">Select file</button>
 							                    <span><i class="icon-arrow-up"></i>Browse</span>
 							                </div>
+											
 							                <div class="del-poll-li">
 							                    <i class="icon-remove"></i>
-							                </div>
+							                </div>-->
 							                <div class="move-poll-li"><i class="icon-fullscreen"></i></div></div></div></li></ul>
 <!--							<div>
 								<label for="question-details-191" class="required">Details<span>*</span></label><div class="the-details the-textarea"><div id="wp-question-details-191-wrap" class="wp-core-ui wp-editor-wrap tmce-active"><link rel="stylesheet" id="editor-buttons-css" href="https://bedkihal.com/projects.com/infinityerror4/wp-includes/css/editor.min.css?ver=5.4.2" type="text/css" media="all">

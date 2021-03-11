@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0038)https://fluentthemes.com/wp/knowledge/ -->
+<!-- saved from url=(0038)<?=base_url()?>/wp/knowledge/ -->
 <html lang="en-US" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop 
 websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms 
 csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
@@ -9,7 +9,7 @@ csstransforms3d csstransitions fontface generatedcontent video audio localstorag
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="https://fluentthemes.com/wp/knowledge/xmlrpc.php">
+	<link rel="pingback" href="<?=base_url()?>/wp/knowledge/xmlrpc.php">
 	<title>A Knowledge Base Theme | Knowledge Q/A Theme</title>
 	<link rel="stylesheet" href="<?=base_url('myassets/css/font.css')?>">
 	<link rel="stylesheet" type="text/css" href="<?=base_url('myassets/css/icofont/icofont.min.css')?>">
@@ -17,8 +17,8 @@ csstransforms3d csstransitions fontface generatedcontent video audio localstorag
 	<meta name="robots" content="noindex,nofollow">
 	<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
 	<link rel="dns-prefetch" href="https://fonts.gstatic.com/">
-	<link rel="alternate" type="application/rss+xml" title="Knowledge Q/A Theme » Feed" href="https://fluentthemes.com/wp/knowledge/feed/">
-	<link rel="alternate" type="application/rss+xml" title="Knowledge Q/A Theme » Comments Feed" href="https://fluentthemes.com/wp/knowledge/comments/feed/">
+	<link rel="alternate" type="application/rss+xml" title="Knowledge Q/A Theme » Feed" href="<?=base_url()?>/wp/knowledge/feed/">
+	<link rel="alternate" type="application/rss+xml" title="Knowledge Q/A Theme » Comments Feed" href="<?=base_url()?>/wp/knowledge/comments/feed/">
 	<style type="text/css">
 	img.wp-smiley,img.emoji
 	{
@@ -43,23 +43,23 @@ csstransforms3d csstransitions fontface generatedcontent video audio localstorag
 
     <script type="text/javascript" src="<?=base_url('myassets/js/jquery.js')?>"></script> 
     <script type="text/javascript" src="<?=base_url('myassets/js/jquery-migrate.min.js')?>"></script> 
-    <link rel="https://api.w.org/" href="https://fluentthemes.com/wp/knowledge/wp-json/">
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://fluentthemes.com/wp/knowledge/xmlrpc.php?rsd">
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://fluentthemes.com/wp/knowledge/wp-includes/wlwmanifest.xml">
+    <link rel="https://api.w.org/" href="<?=base_url()?>/wp/knowledge/wp-json/">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="<?=base_url()?>/wp/knowledge/xmlrpc.php?rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="<?=base_url()?>/wp/knowledge/wp-includes/wlwmanifest.xml">
     
     
     
 
     <meta name="generator" content="WordPress 5.4.2">
 
-    <link rel="canonical" href="https://fluentthemes.com/wp/knowledge/">
-    <link rel="shortlink" href="https://fluentthemes.com/wp/knowledge/">
-    <link rel="shortcut icon" href="https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/favicon.png" type="image/x-icon">
+    <link rel="canonical" href="<?=base_url()?>/wp/knowledge/">
+    <link rel="shortlink" href="<?=base_url()?>/wp/knowledge/">
+    <link rel="shortcut icon" href="<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/favicon.png" type="image/x-icon">
     
     <meta property="og:site_name" content="Knowledge Q/A Theme">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/01/logo-knowledge.png"><meta property="og:title" content="Home">
-    <meta property="og:url" content="https://fluentthemes.com/wp/knowledge/"> 
+    <meta property="og:image" content="<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/01/logo-knowledge.png"><meta property="og:title" content="Home">
+    <meta property="og:url" content="<?=base_url()?>/wp/knowledge/"> 
     <noscript>
         <style id="rocket-lazyload-nojs-css">
             .rll-youtube-player,[data-lazy-src]

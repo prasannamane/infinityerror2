@@ -5,7 +5,7 @@
     <script type="text/javascript">
         jQuery(document).ready(function() 
         {
-	        jQuery('#live-search #s').liveSearch({url: 'https://fluentthemes.com/wp/knowledge/index.php?ajax=1&s='});
+	        jQuery('#live-search #s').liveSearch({url: '<?=base_url()?>/wp/knowledge/index.php?ajax=1&s='});
 	    });
     </script> 
     <script type="text/javascript">

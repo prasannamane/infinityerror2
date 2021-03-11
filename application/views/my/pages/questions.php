@@ -28,12 +28,19 @@
 						<div class="clearfix"></div>
 						<div class="question-desc" itemprop="mainContentOfPage">
 							<div class="infocenter-question-reporting">
+						
 								<h3>Please explain why do you think this question should be reported?</h3>
 								<textarea name="infocenter-question-reporting"></textarea>
 								<div class="clearfix"></div>
 								<div class="loader_3"></div> <a class="color button small report">Report</a>  <a class="color button small dark_button cancel">Cancel</a>
 							</div>
 							<p><?=$row['description']?></p>
+							<div>
+							<?php if($row['youtube'] != ""){ ?>
+							<a href="<?=$row['youtube']?>" target="_blanck"><img style=" margin: 5px; border-radius: 12px; border: 5px solid #cee0ed;" 
+										src="http://infinityerror.local.com/myassets/image/play.jpg" alt="Snow"></a>
+							<?php } ?>
+							</div>
 							<p><strong>Video Structure</strong>
 							</p>
 							<div>
@@ -111,8 +118,8 @@
 							--><div class="loader_2"></div>
 							<div class="no_vote_more"></div>
 						</div>
-						<div class="question-tags"><a href="https://fluentthemes.com/wp/knowledge/question-tag/php/">php</a>  
-						<a href="https://fluentthemes.com/wp/knowledge/question-tag/wordpress/">wordpress</a>
+						<div class="question-tags"><a href="<?=base_url()?>/wp/knowledge/question-tag/php/">php</a>  
+						<a href="<?=base_url()?>/wp/knowledge/question-tag/wordpress/">wordpress</a>
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -129,9 +136,9 @@
 						<li class="comment byuser comment-author-umar even thread-even depth-1 comment " id="li-comment-10">
 							<div id="comment-10" class="comment-body clearfix" rel="post-279">
 								<div class="avatar-img">
-									<img alt="Umar Amin" src="https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg" data-lazy-src="https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg" class="lazyloaded" data-was-processed="true">
+									<img alt="Umar Amin" src="<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg" data-lazy-src="<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg" class="lazyloaded" data-was-processed="true">
 									<noscript>
-										<img alt='Umar Amin' src='https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg'>l
+										<img alt='Umar Amin' src='<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg'>l
 									</noscript>
 								</div>
 								<div class="comment-text">
@@ -149,6 +156,7 @@
 											?>
 
 											<div class="fnone"> <a href=""> <?=$user_details[0]['name']?> </a>
+											
 											</div>
 											<div class="date fnone">Got <span class="fnone question-vote-result question_vote_result "><?=$row['vote']?></span> Votes</div>
 										</div>
@@ -157,6 +165,7 @@
 										</div>
 										<div class="comment-reply"> <a class="question_r_l comment_l report_c" href="#"><i class="icon-flag"></i>Report</a>
 										</div>
+										
 									</div>
 									<div class="text">
 										<div class="infocenter-question-reporting">
@@ -166,6 +175,13 @@
 											<div class="loader_3"></div> <a class="color button small report">Report</a>  <a class="color button small dark_button cancel">Cancel</a>
 										</div>
 										<div class="timeline-content">
+									
+										<div>
+							<?php if($row['youtube'] != ""){ ?>
+							<a href="<?=$row['youtube']?>" target="_blanck"><img style=" margin: 5px; border-radius: 12px; border: 5px solid #cee0ed;" 
+										src="http://infinityerror.local.com/myassets/image/play.jpg" alt="Snow"></a>
+							<?php } ?>
+							</div>
 											<p>
 											<?php if($row['video'] != ""){ ?>
 											<video  controls><source src="<?=base_url()?>/<?=$row['video']?>" type="video/mp4"></video>
@@ -289,7 +305,7 @@ class EventServiceProvider extends ServiceProvider
 								<label class="required" for="comment_url">Website</label>
 								<input name="url" type="text" value="" id="comment_url">
 							</p>
-						</div>-->
+						</div>
 						<div class="clearfix">
 							<label for="attachment">Attachment</label>
 							<div class="fileinputs">
@@ -298,7 +314,17 @@ class EventServiceProvider extends ServiceProvider
 									<button type="button" class="small margin_0">Select file</button> <span><i class="icon-arrow-up"></i>Browse</span>
 								</div>
 							</div>
+						</div>-->
+						<div id="">
+						<p>
+									        <label for="" class="required">Youtube Link</label>
+									        <input required name="youtube" id="" class="the-title" type="text" value="" placeholder="https://www.youtube.com/">
+									        
+								            </p>
+							<p class="form-allowed-tags">You may use these &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; tags and attributes: <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt; </code>
+							</p>
 						</div>
+
 						<div id="respond-textarea">
 							<p>
 								<label class="required" for="comment">Comment<span>*</span>
@@ -319,7 +345,7 @@ class EventServiceProvider extends ServiceProvider
 					<?php } ?>
 				</div>
 				<div class="post-next-prev clearfix">
-					<p class="prev-post"> <a href="https://fluentthemes.com/wp/knowledge/questions/change-navbar-color-in-twitter-bootstrap-3/" rel="prev"><i class="icon-angle-left"></i>&nbsp;Previous question</a>
+					<p class="prev-post"> <a href="<?=base_url()?>/wp/knowledge/questions/change-navbar-color-in-twitter-bootstrap-3/" rel="prev"><i class="icon-angle-left"></i>&nbsp;Previous question</a>
 					</p>
 					<p class="next-post"></p>
 				</div>
@@ -330,27 +356,27 @@ class EventServiceProvider extends ServiceProvider
 					<ul class="related-posts">
 						<li class="related-item">
 							<div class="questions-div">
-								<h3> <a href="https://fluentthemes.com/wp/knowledge/questions/bootstrap-fixed-sidebar-causes-main-content-to-overlap/" title="Bootstrap fixed sidebar causes main content to overlap?" rel="bookmark"> <i class="icon-angle-right"></i> Bootstrap fixed sidebar causes main </a></h3>
+								<h3> <a href="<?=base_url()?>/wp/knowledge/questions/bootstrap-fixed-sidebar-causes-main-content-to-overlap/" title="Bootstrap fixed sidebar causes main content to overlap?" rel="bookmark"> <i class="icon-angle-right"></i> Bootstrap fixed sidebar causes main </a></h3>
 							</div>
 						</li>
 						<li class="related-item">
 							<div class="questions-div">
-								<h3> <a href="https://fluentthemes.com/wp/knowledge/questions/choosing-bootstrap-vs-material-design/" title="Choosing bootstrap vs material design" rel="bookmark"> <i class="icon-angle-right"></i> Choosing bootstrap vs material design </a></h3>
+								<h3> <a href="<?=base_url()?>/wp/knowledge/questions/choosing-bootstrap-vs-material-design/" title="Choosing bootstrap vs material design" rel="bookmark"> <i class="icon-angle-right"></i> Choosing bootstrap vs material design </a></h3>
 							</div>
 						</li>
 						<li class="related-item">
 							<div class="questions-div">
-								<h3> <a href="https://fluentthemes.com/wp/knowledge/questions/php-login-system-not-working-correctly/" title="Php login system not working correctly" rel="bookmark"> <i class="icon-angle-right"></i> Php login system not working </a></h3>
+								<h3> <a href="<?=base_url()?>/wp/knowledge/questions/php-login-system-not-working-correctly/" title="Php login system not working correctly" rel="bookmark"> <i class="icon-angle-right"></i> Php login system not working </a></h3>
 							</div>
 						</li>
 						<li class="related-item">
 							<div class="questions-div">
-								<h3> <a href="https://fluentthemes.com/wp/knowledge/questions/php-recursive-function-not-working-right/" title="Php recursive function not working right" rel="bookmark"> <i class="icon-angle-right"></i> Php recursive function not working </a></h3>
+								<h3> <a href="<?=base_url()?>/wp/knowledge/questions/php-recursive-function-not-working-right/" title="Php recursive function not working right" rel="bookmark"> <i class="icon-angle-right"></i> Php recursive function not working </a></h3>
 							</div>
 						</li>
 						<li class="related-item">
 							<div class="questions-div">
-								<h3> <a href="https://fluentthemes.com/wp/knowledge/questions/how-to-automatically-generates-html-table-by-javascript/" title="How to automatically generates HTML table by JavaScript?" rel="bookmark"> <i class="icon-angle-right"></i> How to automatically generates HTML </a></h3>
+								<h3> <a href="<?=base_url()?>/wp/knowledge/questions/how-to-automatically-generates-html-table-by-javascript/" title="How to automatically generates HTML table by JavaScript?" rel="bookmark"> <i class="icon-angle-right"></i> How to automatically generates HTML </a></h3>
 							</div>
 						</li>
 					</ul>
@@ -358,21 +384,21 @@ class EventServiceProvider extends ServiceProvider
 				<div id="questions_categories-widget-2" class="widget questions_categories-widget">
 					<h3 class="widget_title">Questions Categories</h3>
 					<ul>
-						<li> <a href="https://fluentthemes.com/wp/knowledge/question-category/css/">CSS <span> ( <span>2 Questions</span> ) </span> </a>
+						<li> <a href="<?=base_url()?>/wp/knowledge/question-category/css/">CSS <span> ( <span>2 Questions</span> ) </span> </a>
 						</li>
-						<li> <a href="https://fluentthemes.com/wp/knowledge/question-category/html/">HTML <span> ( <span>3 Questions</span> ) </span> </a>
+						<li> <a href="<?=base_url()?>/wp/knowledge/question-category/html/">HTML <span> ( <span>3 Questions</span> ) </span> </a>
 						</li>
-						<li> <a href="https://fluentthemes.com/wp/knowledge/question-category/php/">PHP <span> ( <span>1 Questions</span> ) </span> </a>
+						<li> <a href="<?=base_url()?>/wp/knowledge/question-category/php/">PHP <span> ( <span>1 Questions</span> ) </span> </a>
 						</li>
-						<li> <a href="https://fluentthemes.com/wp/knowledge/question-category/wordpress/">WordPress <span> ( <span>1 Questions</span> ) </span> </a>
+						<li> <a href="<?=base_url()?>/wp/knowledge/question-category/wordpress/">WordPress <span> ( <span>1 Questions</span> ) </span> </a>
 						</li>
 					</ul>
 				</div>
 				<div class="advertising">
 					<a href="javascript:void(0)">
-						<img alt="" src="https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/your-ad-here.jpg" data-lazy-src="https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/your-ad-here.jpg" class="error" data-was-processed="true">
+						<img alt="" src="<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/your-ad-here.jpg" data-lazy-src="<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/your-ad-here.jpg" class="error" data-was-processed="true">
 						<noscript>
-							<img alt="" src="https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/your-ad-here.jpg">
+							<img alt="" src="<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/your-ad-here.jpg">
 						</noscript>
 					</a>
 				</div>
@@ -383,65 +409,65 @@ class EventServiceProvider extends ServiceProvider
 						<ul>
 							<li>
 								<div class="author-img">
-									<a href="https://fluentthemes.com/wp/knowledge/author/umar/">
-										<img alt="Umar Amin" src="https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg" data-lazy-src="https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg" class="lazyloaded" data-was-processed="true">
+									<a href="<?=base_url()?>/wp/knowledge/author/umar/">
+										<img alt="Umar Amin" src="<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg" data-lazy-src="<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg" class="lazyloaded" data-was-processed="true">
 										<noscript>
-											<img alt='Umar Amin' src='https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg'>
+											<img alt='Umar Amin' src='<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg'>
 										</noscript>
 									</a>
 								</div>
-								<h6><a href="https://fluentthemes.com/wp/knowledge/questions/how-to-automatically-generates-html-table-by-javascript/#comment-11">Umar Amin : Set it as the font John Doe Lorem ipsum dolor sit amet, cons</a></h6>
+								<h6><a href="<?=base_url()?>/wp/knowledge/questions/how-to-automatically-generates-html-table-by-javascript/#comment-11">Umar Amin : Set it as the font John Doe Lorem ipsum dolor sit amet, cons</a></h6>
 							</li>
 							<li>
 								<div class="author-img">
-									<a href="https://fluentthemes.com/wp/knowledge/author/umar/">
-										<img alt="Umar Amin" src="https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg" data-lazy-src="https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg" class="lazyloaded" data-was-processed="true">
+									<a href="<?=base_url()?>/wp/knowledge/author/umar/">
+										<img alt="Umar Amin" src="<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg" data-lazy-src="<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg" class="lazyloaded" data-was-processed="true">
 										<noscript>
-											<img alt='Umar Amin' src='https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg'>
+											<img alt='Umar Amin' src='<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/umar-image-1-65x65.jpg'>
 										</noscript>
 									</a>
 								</div>
-								<h6><a href="https://fluentthemes.com/wp/knowledge/questions/php-recursive-function-not-working-right/#comment-10">Umar Amin : Set it as the font John Doe Lorem ipsum dolor sit amet, cons</a></h6>
+								<h6><a href="<?=base_url()?>/wp/knowledge/questions/php-recursive-function-not-working-right/#comment-10">Umar Amin : Set it as the font John Doe Lorem ipsum dolor sit amet, cons</a></h6>
 							</li>
 							<li>
 								<div class="author-img">
-									<a href="https://fluentthemes.com/wp/knowledge/author/randy/">
-										<img alt="Randy Axy" src="https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/randy-image-1-65x65.jpg" data-lazy-src="https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/randy-image-1-65x65.jpg" class="lazyloaded" data-was-processed="true">
+									<a href="<?=base_url()?>/wp/knowledge/author/randy/">
+										<img alt="Randy Axy" src="<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/randy-image-1-65x65.jpg" data-lazy-src="<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/randy-image-1-65x65.jpg" class="lazyloaded" data-was-processed="true">
 										<noscript>
-											<img alt='Randy Axy' src='https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/randy-image-1-65x65.jpg'>
+											<img alt='Randy Axy' src='<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/randy-image-1-65x65.jpg'>
 										</noscript>
 									</a>
 								</div>
-								<h6><a href="https://fluentthemes.com/wp/knowledge/questions/php-login-system-not-working-correctly/#comment-9">Randy Axy : Set it as the font John Doe Lorem ipsum dolor sit amet, cons</a></h6>
+								<h6><a href="<?=base_url()?>/wp/knowledge/questions/php-login-system-not-working-correctly/#comment-9">Randy Axy : Set it as the font John Doe Lorem ipsum dolor sit amet, cons</a></h6>
 							</li>
 							<li>
 								<div class="author-img">
-									<a href="https://fluentthemes.com/wp/knowledge/author/emily/">
-										<img alt="Emily Cooper" src="https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/emily-image-2-65x65.jpg" data-lazy-src="https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/emily-image-2-65x65.jpg" class="lazyloaded" data-was-processed="true">
+									<a href="<?=base_url()?>/wp/knowledge/author/emily/">
+										<img alt="Emily Cooper" src="<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/emily-image-2-65x65.jpg" data-lazy-src="<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/emily-image-2-65x65.jpg" class="lazyloaded" data-was-processed="true">
 										<noscript>
-											<img alt='Emily Cooper' src='https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/emily-image-2-65x65.jpg'>
+											<img alt='Emily Cooper' src='<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/emily-image-2-65x65.jpg'>
 										</noscript>
 									</a>
 								</div>
-								<h6><a href="https://fluentthemes.com/wp/knowledge/questions/php-login-system-not-working-correctly/#comment-8">Emily Cooper : Set it as the font John Doe Lorem ipsum dolor sit amet, cons</a></h6>
+								<h6><a href="<?=base_url()?>/wp/knowledge/questions/php-login-system-not-working-correctly/#comment-8">Emily Cooper : Set it as the font John Doe Lorem ipsum dolor sit amet, cons</a></h6>
 							</li>
 							<li>
 								<div class="author-img">
-									<a href="https://fluentthemes.com/wp/knowledge/author/jasica/">
-										<img alt="Jasica" src="https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/jasica-image-1-65x65.jpg" data-lazy-src="https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/jasica-image-1-65x65.jpg" class="lazyloaded" data-was-processed="true">
+									<a href="<?=base_url()?>/wp/knowledge/author/jasica/">
+										<img alt="Jasica" src="<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/jasica-image-1-65x65.jpg" data-lazy-src="<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/jasica-image-1-65x65.jpg" class="lazyloaded" data-was-processed="true">
 										<noscript>
-											<img alt='Jasica' src='https://fluentthemes.com/wp/knowledge/wp-content/uploads/2017/02/jasica-image-1-65x65.jpg'>
+											<img alt='Jasica' src='<?=base_url()?>/wp/knowledge/wp-content/uploads/2017/02/jasica-image-1-65x65.jpg'>
 										</noscript>
 									</a>
 								</div>
-								<h6><a href="https://fluentthemes.com/wp/knowledge/questions/bootstrap-fixed-sidebar-causes-main-content-to-overlap/#comment-7">Jasica : I am trying to use file_get_contents However that gives me e</a></h6>
+								<h6><a href="<?=base_url()?>/wp/knowledge/questions/bootstrap-fixed-sidebar-causes-main-content-to-overlap/#comment-7">Jasica : I am trying to use file_get_contents However that gives me e</a></h6>
 							</li>
 						</ul>
 					</div>
 				</div>
 				<div id="tag_cloud-2" class="widget widget_tag_cloud">
 					<h3 class="widget_title">Tag Cloud</h3>
-					<div class="tagcloud"><a href="https://fluentthemes.com/wp/knowledge/question-tag/bootstrap/" class="tag-cloud-link tag-link-5 tag-link-position-1" style="font-size: 22pt;" aria-label="bootstrap (3 items)">bootstrap</a>  <a href="https://fluentthemes.com/wp/knowledge/question-tag/css/" class="tag-cloud-link tag-link-4 tag-link-position-2" style="font-size: 16.4pt;" aria-label="css (2 items)">css</a>  <a href="https://fluentthemes.com/wp/knowledge/question-tag/design/" class="tag-cloud-link tag-link-40 tag-link-position-3" style="font-size: 8pt;" aria-label="design (1 item)">design</a>  <a href="https://fluentthemes.com/wp/knowledge/question-tag/html/" class="tag-cloud-link tag-link-3 tag-link-position-4" style="font-size: 16.4pt;" aria-label="html (2 items)">html</a>  <a href="https://fluentthemes.com/wp/knowledge/question-tag/jquery/" class="tag-cloud-link tag-link-39 tag-link-position-5" style="font-size: 8pt;" aria-label="jquery (1 item)">jquery</a>  <a href="https://fluentthemes.com/wp/knowledge/question-tag/login/" class="tag-cloud-link tag-link-38 tag-link-position-6" style="font-size: 8pt;" aria-label="login (1 item)">login</a>  <a href="https://fluentthemes.com/wp/knowledge/question-tag/material/" class="tag-cloud-link tag-link-15 tag-link-position-7" style="font-size: 8pt;" aria-label="material (1 item)">material</a>  <a href="https://fluentthemes.com/wp/knowledge/question-tag/php/" class="tag-cloud-link tag-link-37 tag-link-position-8" style="font-size: 16.4pt;" aria-label="php (2 items)">php</a>  <a href="https://fluentthemes.com/wp/knowledge/question-tag/rss-reader/" class="tag-cloud-link tag-link-6 tag-link-position-9" style="font-size: 8pt;" aria-label="rss-reader (1 item)">rss-reader</a>  <a href="https://fluentthemes.com/wp/knowledge/question-tag/web/" class="tag-cloud-link tag-link-7 tag-link-position-10" style="font-size: 8pt;" aria-label="web (1 item)">web</a>  <a href="https://fluentthemes.com/wp/knowledge/question-tag/wordpress/" class="tag-cloud-link tag-link-41 tag-link-position-11" style="font-size: 8pt;" aria-label="wordpress (1 item)">wordpress</a>
+					<div class="tagcloud"><a href="<?=base_url()?>/wp/knowledge/question-tag/bootstrap/" class="tag-cloud-link tag-link-5 tag-link-position-1" style="font-size: 22pt;" aria-label="bootstrap (3 items)">bootstrap</a>  <a href="<?=base_url()?>/wp/knowledge/question-tag/css/" class="tag-cloud-link tag-link-4 tag-link-position-2" style="font-size: 16.4pt;" aria-label="css (2 items)">css</a>  <a href="<?=base_url()?>/wp/knowledge/question-tag/design/" class="tag-cloud-link tag-link-40 tag-link-position-3" style="font-size: 8pt;" aria-label="design (1 item)">design</a>  <a href="<?=base_url()?>/wp/knowledge/question-tag/html/" class="tag-cloud-link tag-link-3 tag-link-position-4" style="font-size: 16.4pt;" aria-label="html (2 items)">html</a>  <a href="<?=base_url()?>/wp/knowledge/question-tag/jquery/" class="tag-cloud-link tag-link-39 tag-link-position-5" style="font-size: 8pt;" aria-label="jquery (1 item)">jquery</a>  <a href="<?=base_url()?>/wp/knowledge/question-tag/login/" class="tag-cloud-link tag-link-38 tag-link-position-6" style="font-size: 8pt;" aria-label="login (1 item)">login</a>  <a href="<?=base_url()?>/wp/knowledge/question-tag/material/" class="tag-cloud-link tag-link-15 tag-link-position-7" style="font-size: 8pt;" aria-label="material (1 item)">material</a>  <a href="<?=base_url()?>/wp/knowledge/question-tag/php/" class="tag-cloud-link tag-link-37 tag-link-position-8" style="font-size: 16.4pt;" aria-label="php (2 items)">php</a>  <a href="<?=base_url()?>/wp/knowledge/question-tag/rss-reader/" class="tag-cloud-link tag-link-6 tag-link-position-9" style="font-size: 8pt;" aria-label="rss-reader (1 item)">rss-reader</a>  <a href="<?=base_url()?>/wp/knowledge/question-tag/web/" class="tag-cloud-link tag-link-7 tag-link-position-10" style="font-size: 8pt;" aria-label="web (1 item)">web</a>  <a href="<?=base_url()?>/wp/knowledge/question-tag/wordpress/" class="tag-cloud-link tag-link-41 tag-link-position-11" style="font-size: 8pt;" aria-label="wordpress (1 item)">wordpress</a>
 					</div>
 				</div>
 			</aside>
