@@ -1,9 +1,4 @@
 <?php
-
-    ini_set('display_errors', 1);
-    ini_set('display_startup_errors', 1);
-    error_reporting(E_ALL);
-
     defined('BASEPATH') OR exit('No direct script access allowed');
 
     class Home extends CI_Controller 
@@ -253,9 +248,7 @@
       	public function questions($id = 0)
       	{
             $img_path   = "";      	     
-      	    $cond       = array(
-      	                    'id' => $id
-                            );
+      	    $cond       = array('id' => $id);
       	    $tbl        = "quetions";      
       	    $res = $this->HomeModel->view_($tbl, $cond);
       	    if($this->input->post('reply'))
@@ -462,7 +455,7 @@
             $search = $this->input->post('s');
 
             if($search){
-                $get_count = $this->HomeModel->get_count_search($tbl, $search); //$this->HomeModel->quetions_search($tbl, $search, $config["per_page"], $page);
+                $get_count = $this->HomeModel->get_count_search($tbl, $search); 
             }
             else
             {
@@ -482,16 +475,28 @@
                        
             if($search){
                 $quetions = $this->HomeModel->quetions_search($tbl, $search, $config["per_page"], $page);
+                $most_responses = $quetions;
+                $recently_answered = $quetions;
+                $no_answers = $quetions;
             }
             else
             {
                 $quetions = $this->HomeModel->quetions($tbl, $config["per_page"], $page);
+                $most_responses = $this->HomeModel->most_responses($tbl, $config["per_page"], $page);
+                $recently_answered = $this->HomeModel->recently_answered($tbl, $config["per_page"], $page);
+                $no_answers = $this->HomeModel->no_answers($tbl, $config["per_page"], $page);
             }        
       	    
             $data['page_name'] = 'Home';
-      	    $data['quetions'] = $quetions;
+
             
-            //print_r($data['quetions']);
+            $data['quetions'] = $quetions;
+            $data['most_responses'] = $most_responses;
+            $data['recently_answered'] = $recently_answered;
+            $data['no_answers'] = $no_answers;
+            
+
+           
             
       	    $this->load->view('my/template/head', $data);
       	    $this->load->view('my/template/startbody');

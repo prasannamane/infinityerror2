@@ -48,30 +48,27 @@
 								            </p>
 
 											<p>
-									        <label for="" class="required">Youtube Link</label>
+									        <label for="" class="required">Youtube Link<span>*</span></label>
 									        <input required name="youtube" id="" class="the-title" type="text" value="" placeholder="https://www.youtube.com/">
-									        
+											<span class="infocenter-qform-desc">Please type your youtube link here.</span>									        
 								            </p>
 								           <!-- 
 								            <p>
 										    <label for="question_tags-191">Tags</label>
 										    <input type="checkbox" id="" class="" name="tag[]" value="1">PHP
-
-
 										    <span class="infocenter-qform-desc">Please input your Keywords here. Example : <span class="color">html , php</span> .</span>
 									        </p>-->
-											<!--										    <input type="text" class="input question_tags" name="question_tags" id="question_tags-191" value="" data-seperator="," style="display: none;"><ul class="taglist"><li class="input"><input type="text"><span style="display: none;"></span></li></ul>-->
-									        
+											<!--<input type="text" class="input question_tags" name="question_tags" id="question_tags-191" value="" data-seperator="," style="display: none;"><ul class="taglist"><li class="input"><input type="text"><span style="display: none;"></span></li></ul>-->
 									       <!-- <p>
 									            <label for="question-category-191" class="required">Category<span>*</span></label>
 									            <span class="styled-select"><select name="category" id="question-category-191" class="postform">
 	                                            <option value="-1">Select a Category</option>
-	<option class="level-0" value="7">CSS</option>
-	<option class="level-0" value="10">HTML</option>
-	<option class="level-0" value="12">PHP</option>
-	<option class="level-0" value="15">WordPress</option>
-</select>
-</span>
+										<option class="level-0" value="7">CSS</option>
+										<option class="level-0" value="10">HTML</option>
+										<option class="level-0" value="12">PHP</option>
+										<option class="level-0" value="15">WordPress</option>
+									</select>
+									</span>
 									<span class="infocenter-qform-desc">Please choose correct category for the question.</span>
 								</p>-->
 								

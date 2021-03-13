@@ -83,6 +83,39 @@
             return $query->result_array();
         }
 
+        public function most_responses($tbl, $limit, $start) 
+        {
+            $query = $this->db->select('q.youtube, q.id, q.title, q.user_id, q.video, q.description, q.vote, q.view, q.answer, q.created_at, q.updated_at, s.name')
+            ->from('quetions as q')
+            ->join('signup as s', 'q.user_id = s.id', 'LEFT')
+            ->limit($limit, $start)
+            ->order_by('q.view', 'desc')
+            ->get();
+            return $query->result_array();
+        }
+
+        public function recently_answered($tbl, $limit, $start) 
+        {
+            $query = $this->db->select('q.youtube, q.id, q.title, q.user_id, q.video, q.description, q.vote, q.view, q.answer, q.created_at, q.updated_at, s.name')
+            ->from('quetions as q')
+            ->join('signup as s', 'q.user_id = s.id', 'LEFT')
+            ->limit($limit, $start)
+            ->order_by('q.id')
+            ->get();
+            return $query->result_array();
+        }
+
+        public function no_answers($tbl, $limit, $start) 
+        {
+            $query = $this->db->select('q.youtube, q.id, q.title, q.user_id, q.video, q.description, q.vote, q.view, q.answer, q.created_at, q.updated_at, s.name')
+            ->from('quetions as q')
+            ->join('signup as s', 'q.user_id = s.id', 'LEFT')
+            ->limit($limit, $start)
+            ->order_by('q.id')
+            ->get();
+            return $query->result_array();
+        }
+
         public function quetions_search($tbl, $search, $limit, $start)
         {
             
