@@ -485,6 +485,7 @@
                 $most_responses = $this->HomeModel->most_responses($tbl, $config["per_page"], $page);
                 $recently_answered = $this->HomeModel->recently_answered($tbl, $config["per_page"], $page);
                 $no_answers = $this->HomeModel->no_answers($tbl, $config["per_page"], $page);
+                
             }        
       	    
             $data['page_name'] = 'Home';

@@ -1,6 +1,6 @@
 <div class="tab-inner-warp" style="display: block;">
 						<div class="tab-inner">
-							<?php foreach ($quetions as $raw) { ?>
+							<?php foreach ($most_responses as $raw) { ?>
 								<article class="question question-type-normal question_author_yes post-279 type-question status-publish hentry question-category-wordpress question_tags-php question_tags-wordpress" id="post-279" itemscope="" itemtype="http://schema.org/Article">
 									<h2 itemprop="name">
 										<a itemprop="url" href="<?= base_url('home/questions/') ?><?= $raw['id'] ?>" title="Php recursive function not working right" rel="bookmark">

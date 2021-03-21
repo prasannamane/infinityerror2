@@ -49,7 +49,7 @@
 
 											<p>
 									        <label for="" class="required">Youtube Link<span>*</span></label>
-									        <input required name="youtube" id="" class="the-title" type="text" value="" placeholder="https://www.youtube.com/">
+									        <input name="youtube" id="" class="the-title" type="text" value="" placeholder="https://www.youtube.com/">
 											<span class="infocenter-qform-desc">Please type your youtube link here.</span>									        
 								            </p>
 								           <!-- 

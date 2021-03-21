@@ -107,12 +107,8 @@
 
         public function no_answers($tbl, $limit, $start) 
         {
-            $query = $this->db->select('q.youtube, q.id, q.title, q.user_id, q.video, q.description, q.vote, q.view, q.answer, q.created_at, q.updated_at, s.name')
-            ->from('quetions as q')
-            ->join('signup as s', 'q.user_id = s.id', 'LEFT')
-            ->limit($limit, $start)
-            ->order_by('q.id')
-            ->get();
+            
+            $query = $this->db->query("SELECT q.youtube, q.id, q.title, q.user_id, q.video, q.description, q.vote, q.view, q.answer, q.created_at, q.updated_at, s.name FROM quetions as q left join signup as s on q.user_id = s.id where q.id NOT IN (SELECT r.quetions_id from reply as r) GROUP BY q.id limit ".$limit." offset ".$start.""); 
             return $query->result_array();
         }
 
