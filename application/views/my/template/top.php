@@ -4,7 +4,7 @@
             <div class="col-lg-4 col-md-4 col-sm-6 hidden-xs">
                 <ul id="menu-left-top-bar" class="top-nav nav-left">
                     <li><a href="<?=base_url('home')?>">Home</a></li>
-                    <li><a href="<?=base_url('home/blog')?>">Blog</a></li>
+                  <!--  <li><a href="<?=base_url('home/blog')?>">Blog</a></li> -->
                     <li><a href="<?=base_url('home/contact')?>">Contact</a></li>
                 </ul>
             </div>

@@ -98,7 +98,7 @@
 
 
 
-
+					<!--
 					<div id="social-media">
 						<div class="block no-padding">
 							<div class="row">
@@ -128,6 +128,8 @@
 							</div>
 						</div>
 					</div>
+
+					-->
 				
 					</div>
 				</div>

@@ -17,7 +17,7 @@
 		<div class="box_icon box_warp box_no_border box_no_background">
 			<div class="row">
 				<div class="col-md-12">
-					<h2 class="mymobfont">HAVE A QUESTION?</h2>
+					<h2 class="mymobfont">Looking for Video Answer?</h2>
 					<p>If you have any question you can ask below or enter what you are looking for!</p>
 					<div class="clearfix"></div>
 					<div class="clearfix"></div>
