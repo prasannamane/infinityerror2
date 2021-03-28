@@ -25,13 +25,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 /*$config['base_url'] = 'http://localhost/AkshayRaka/admin/';*/
 //$config['base_url'] = 'https://bedkihal.com/projects.com/infinityerror2/';
+if($_SERVER['HTTP_HOST'] == 'bedkihal.com'){
+    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
+        $config['base_url'] = 'https://' . $_SERVER['HTTP_HOST'] . '/projects.com/infinityerror/';
+        //$config['root']   ='https://'.$_SERVER['HTTP_HOST'];
+    } else {
+        $config['base_url'] = 'http://' . $_SERVER['HTTP_HOST'] . '/projects.com/infinityerror/';
+        //$config['root']   ='http://'.$_SERVER['HTTP_HOST'];
+    }
+}elseif($_SERVER['HTTP_HOST'] == 'infinityerror.com'){
+    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
+        $config['base_url'] = 'https://' . $_SERVER['HTTP_HOST'] . '/';
+        //$config['root']   ='https://'.$_SERVER['HTTP_HOST'];
+    } else {
+        $config['base_url'] = 'http://' . $_SERVER['HTTP_HOST'] . '/';
+        //$config['root']   ='http://'.$_SERVER['HTTP_HOST'];
+    }
 
-if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
-    $config['base_url'] = 'https://' . $_SERVER['HTTP_HOST'] . '/projects.com/infinityerror/';
-    //$config['root']   ='https://'.$_SERVER['HTTP_HOST'];
-} else {
-    $config['base_url'] = 'http://' . $_SERVER['HTTP_HOST'] . '/';
-    //$config['root']   ='http://'.$_SERVER['HTTP_HOST'];
+}else{
+    if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
+        $config['base_url'] = 'https://' . $_SERVER['HTTP_HOST'] . '/';
+        //$config['root']   ='https://'.$_SERVER['HTTP_HOST'];
+    } else {
+        $config['base_url'] = 'http://' . $_SERVER['HTTP_HOST'] . '/';
+        //$config['root']   ='http://'.$_SERVER['HTTP_HOST'];
+    }
+
 }
 /*
 |--------------------------------------------------------------------------

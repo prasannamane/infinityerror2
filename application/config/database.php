@@ -97,6 +97,30 @@ if($_SERVER['HTTP_HOST'] == 'bedkihal.com'){
 		'save_queries' => TRUE
 	);
 
+}elseif($_SERVER['HTTP_HOST'] == 'infinityerror.com'){
+
+	$db['default'] = array(
+		'dsn'	=> '',
+		'hostname' => 'localhost',
+		'username' => 'infinityerror',
+		'password' => 'infinityerror',
+		'database' => 'infinityerror',
+		'dbdriver' => 'mysqli',
+		'dbprefix' => '',
+		'pconnect' => FALSE,
+		'db_debug' => (ENVIRONMENT !== 'production'),
+		'cache_on' => FALSE,
+		'cachedir' => '',
+		'char_set' => 'utf8',
+		'dbcollat' => 'utf8_general_ci',
+		'swap_pre' => '',
+		'encrypt' => FALSE,
+		'compress' => FALSE,
+		'stricton' => FALSE,
+		'failover' => array(),
+		'save_queries' => TRUE
+	);
+
 }
 else{ 
 
