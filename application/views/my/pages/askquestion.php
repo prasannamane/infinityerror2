@@ -80,8 +80,7 @@
 								</label>
 								<textarea id="comment" name="description" aria-required="true" cols="58" rows="10" spellcheck="false"></textarea>
 							</p>
-							<p class="form-allowed-tags">You may use these &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; tags and attributes: <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt; </code>
-							</p>
+
 						</div>
 								
 							<!--	<p>

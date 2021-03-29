@@ -1,12 +1,9 @@
 <header id="header" class="">
 	<div class="container clearfix" itemscope="" itemtype="http://schema.org/Thing">
 		<div class="logo"> <a class="logo-img" href="<?= base_url('home') ?>" itemprop="url" title="Knowledge Q/A Theme">
-				<img class="default_logo lazyloaded" itemprop="logo" alt="Knowledge Q/A Theme" src="<?= base_url('myassets/image/logo-knowledge.png') ?>" data-lazy-src="<?= base_url() ?>/wp/knowledge/wp-content/uploads/2017/01/logo-knowledge.png" data-was-processed="true">
-				<noscript>
-					<img class="default_logo" itemprop="logo" alt="Knowledge Q/A Theme" src="<?= base_url() ?>/wp/knowledge/wp-content/uploads/2017/01/logo-knowledge.png">
-				</noscript>
-				<img class="retina_logo" itemprop="logo" alt="Knowledge Q/A Theme" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%200%200&#39;%3E%3C/svg%3E" data-lazy-src="<?= base_url() ?>/wp/knowledge/wp-content/uploads/2017/01/logo-knowledge.png"><noscript>
-					<img class="retina_logo" itemprop="logo" alt="Knowledge Q/A Theme" src="<?= base_url() ?>/wp/knowledge/wp-content/uploads/2017/01/logo-knowledge.png"></noscript> </a>
+				<img class="default_logo lazyloaded" itemprop="logo" alt="Knowledge Q/A Theme" src="<?=base_url('myassets/image/logo-knowledge.png')?>" data-lazy-src="<?= base_url() ?>/wp/knowledge/wp-content/uploads/2017/01/logo-knowledge.png" data-was-processed="true">
+
+				<img class="retina_logo" itemprop="logo" alt="Knowledge Q/A Theme" src="data:image/svg+xml,%3Csvg%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%20viewBox=&#39;0%200%200%200&#39;%3E%3C/svg%3E" data-lazy-src="<?=base_url('myassets/image/logo-knowledge.png')?>"> </a>
 			<meta itemprop="name" content="Knowledge Q/A Theme">
 		</div>
 		<nav class="navigation">
@@ -37,16 +34,15 @@
 							<li id="menu-item-270" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-270"> <a href="<?= base_url() ?>/wp/knowledge/contact-with-map/">Contact With Map</a></li>
 						</ul>
 					</li> -->
-					<li class="menu-item-pq publish-question">
+					  <li class="menu-item-pq publish-question">
 						<?php
 						if ($this->session->userdata('userdata') == '') {
 						?>
-							<a href="<?= base_url('Home/signin') ?>">Post Question</a>
+							<a 3 href="<?= base_url('Home/signin') ?>">Post Question</a>
 						<?php
 						} else {
-						?><a href="<?= base_url('Home/askquestion') ?>">Post Question</a> <?php
-																				}
-																					?>
+						?><a 4 href="<?= base_url('Home/askquestion') ?>">Post Question</a> <?php } ?>
+						</li> 
 				</ul>
 			</div>
 		</nav>
@@ -78,20 +74,20 @@
 						<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-129"><a href="<?= base_url() ?>/wp/knowledge/contact/">Contact Us</a></li>
 						<li id="menu-item-270" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-270"><a href="<?= base_url() ?>/wp/knowledge/contact-with-map/">Contact With Map</a></li>
 					</ul>
-				</li>-->
+				</li>--><!-- 
 				<li class="menu-item-pq publish-question ">
 					<?php
 					if ($this->session->userdata('userdata') == '') {
 					?>
-						<a href="<?= base_url('Home/signin') ?>">Post Question</a>
+						<a 1 href="<?= base_url('Home/signin') ?>">Post Question</a>
 					<?php
 					} else {
-					?><a href="<?= base_url('Home/askquestion') ?>">Post Question</a> <?php
-																				}
-																					?>
+					?><<a 2 href="<?= base_url('Home/askquestion') ?>">Post Question</a> <?php
+																					}
+																						?>
 
-				</li>
+				</li>-->
 			</ul>
-		</nav>
+		</nav> 
 	</div>
 </header>

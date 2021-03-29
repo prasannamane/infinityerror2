@@ -324,8 +324,7 @@ class EventServiceProvider extends ServiceProvider
 							<input name="youtube" id="" class="the-title" type="text" value="" placeholder="https://www.youtube.com/">
 
 						</p>
-						<p class="form-allowed-tags">You may use these &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; tags and attributes: <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt; </code>
-						</p>
+						
 					</div>
 
 					<div id="respond-textarea">
@@ -334,8 +333,7 @@ class EventServiceProvider extends ServiceProvider
 							</label>
 							<textarea required id="comment" name="description" aria-required="true" cols="58" rows="10"></textarea>
 						</p>
-						<p class="form-allowed-tags">You may use these &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; tags and attributes: <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt; </code>
-						</p>
+					
 					</div>
 					<div class="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="/wp/knowledge/questions/php-recursive-function-not-working-right/#respond" style="display:none;">Click here to cancel reply.</a>
 					</div>
