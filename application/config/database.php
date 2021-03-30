@@ -97,7 +97,7 @@ if($_SERVER['HTTP_HOST'] == 'bedkihal.com'){
 		'save_queries' => TRUE
 	);
 
-}elseif($_SERVER['HTTP_HOST'] == 'infinityerror.com'){
+}elseif($_SERVER['HTTP_HOST'] == 'infinityerror.com'){ 
 
 	$db['default'] = array(
 		'dsn'	=> '',
